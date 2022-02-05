@@ -1,0 +1,9 @@
+    <input type="checkbox" data-type="checkboxContent"
+이런식으로 data-attribute를 이용하는 이유는 data를 임의로 사용자가 묶기가 편하다.
+그러나 checkbox1,checkbox2,checkbox3 이런식으로 각각의 체크박스 유형이 다르다면
+data-attribute를 사용한다
+-- >
+그 전의 전에 위와 같은 방법을 사용하고 깃허브에 제출했는데 지금 제출한 깃허브 코드의 경우에는 data-attribute가 아니라 class라는 공통 조상으로 묶어서 사용하는 편이 정확하다
+이유는 checkbox1,checkbox2처럼 각각의 체크박스 유형이 다른 상황이 아니기 때문이다. 
+결론은 클래스로 공통적인 것을 묶고 id만을 따로 두는 원치않는 상황이나 공통적인 타입이 없는데 묶어서 이를 사용해야 하는 경우가 발생하면 data-attribute를 사용하는 것이 맞다.
+따라서 위의 버그를 발견하고 코드를 수정
