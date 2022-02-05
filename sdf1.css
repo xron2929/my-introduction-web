@@ -1,0 +1,32 @@
+.checkboxGroup
+{
+    padding-right:5px;   
+}
+#textSetting
+{
+    text-align:center;
+    height:120px;
+    width:153.7px;
+    padding-bottom:0px;
+    margin-bottom:0px;
+}
+#noMargin
+{   
+    position:relative;
+    bottom:17px;
+}
+#noMargin2
+{
+    position:relative;
+    bottom:17px;
+    right:5.5px;
+}
+
+
+#submit
+{
+    width:153.7px;
+    position:relative;
+    right:163.4px;
+    top:3.2px;
+}
