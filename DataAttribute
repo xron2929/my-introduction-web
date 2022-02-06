@@ -16,8 +16,19 @@ data-attribute에 대한 자세한 설명
 빨간색,맑음 밑줄
 빨간색,맑음
 맑음
-이런식으로 줘야한다면 class="textColorRed textFontClear" 이렇게 하거나
-class를 가장 많은 맑음만 묶고 나머지는 id에서 따로 추가해야한다..
+이런식으로 줘야한다면 class="textColorRed textFontClear" 이렇게 해야되는데 이게 많아지면 많아질수록 네이밍이 너무 길어진다.. 
+또한, 저기서 맑음이라는 폰트뿐만 아니라 aria라는 폰트의 클래스도 생긴다면 textFontClear, textColorRed,textDecorationUnderline,textFontAria 클래스로 공통의 조상이라는 점은 알기 쉽지만
+인과관계가 따로없어서 보기쉽고 구분하기 편하려고 네이밍을 짰지만, 역설적으로 간결하지 않다는 문제점이 있다
+그러나 data-attribute는 data-color data-font 요런느낌으로 간단하게 줄여서 짤 수 있다
+class=text data-color=red 요렇게 하면 텍스트 타입의 빨간색을 잡기도 편하고, 검은색,주황색,노란색 이렇게 잡기도 편할 것이다.
+또한 다른 타입의 경우라면, 
+class=border data-color=red
+
+.border[data-class='red']
+{
+   border-color:red;
+}
+이렇게 하면 훨씬 깔끔해 보일 것이다.
 
 빨간색,밑줄 
 밑줄
