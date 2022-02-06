@@ -1,4 +1,4 @@
-  
+  //주석없는 버전은 pull requests에 vscode의 정규식으로 제거
  
     function removeArea()   //버튼 클릭하면 li가 사라지는 함수
     {
