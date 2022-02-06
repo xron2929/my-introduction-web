@@ -1,5 +1,5 @@
   //주석없는 버전은 pull requests에 vscode의 정규식으로 제거
- //Pull Requests의 Resolve conflict를 누르면 됨
+ //branch목록에 들어가서 주석없는 버전 클릭
     function removeArea()   //버튼 클릭하면 li가 사라지는 함수
     {
         const active=document.getElementById('active'); 
