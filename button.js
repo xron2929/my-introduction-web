@@ -1,18 +1,18 @@
-  //주석없는 버전은 pull requests에 vscode의 정규식으로 제거
- //branch목록에 들어가서 주석없는 버전 클릭
+  // 주석없는 버전은 pull requests에 vscode의 정규식으로 제거
+ // branch목록에 들어가서 주석없는 버전 클릭
     function removeArea()   //버튼 클릭하면 li가 사라지는 함수
     {
         const active=document.getElementById('active'); 
-        //javascript의 자식노드를 잡기위해 a 설정
-        //const로 설정한 이유는 값이 바뀌지도 않고 변수를 재선언할 일도 없기 떄문
+        // javascript의 자식노드를 잡기위해 a 설정
+        // const로 설정한 이유는 값이 바뀌지도 않고 변수를 재선언할 일도 없기 떄문
         const childLi=active.getElementsByTagName('li');
-        //a의 li만 지워도 li,text,checkbox 다 지워지기 떄문에 a의 하위태그인 li를 childLi에 넣어둠
-        //다른언어로 아주 쉽게 설명하자면 childLi는 a의 자식태그인 li의 변수를 모은 배열타입이라고 생각
+        // a의 li만 지워도 li,text,checkbox 다 지워지기 떄문에 a의 하위태그인 li를 childLi에 넣어둠
+        // 다른언어로 아주 쉽게 설명하자면 childLi는 a의 자식태그인 li의 변수를 모은 배열타입이라고 생각
         if(childLi.length>0)  
         {
             childLi[childLi.length-1].remove(); 
-            //a안에 원소가 하나 담겨있으면 a.length는 1이고, a의 마지막원소는 0번째 index에 있음
-            //a안에 원소가 2개 담겨있으면 a.length는 2이고, a의 마지막원소는  1번째 index에 있음
+            // a안에 원소가 하나 담겨있으면 a.length는 1이고, a의 마지막원소는 0번째 index에 있음
+            // a안에 원소가 2개 담겨있으면 a.length는 2이고, a의 마지막원소는  1번째 index에 있음
         }
     }
     /*
@@ -41,36 +41,37 @@
         const textSetting=document.getElementById('textSetting');
         textSetting.value='';
     }
-    //textSetting의 id를 그대로 변수에 받아서 value 안의 값을 ''로 만들어서 지움
+    // textSetting의 id를 그대로 변수에 받아서 value 안의 값을 ''로 만들어서 지움
     function addArea()
     {
         const active=document.getElementById('active');  
         const li=document.createElement('li');
         const TextSetting=document.getElementById('textSetting');
         try{    //TextSetting이랑 data-set에서 에러가 연속으로 잡혀서 try-catch문으로 에러출력해서 
-        //수정함
+        // 수정함
         const text=document.createTextNode(TextSetting.value); 
        
         const cbmake=document.createElement('input');
         cbmake.type="checkbox";
         cbmake.className="checkboxContent";
-        //checkboxContent추가
+        // checkboxContent추가
         
         li.appendChild(text); //<li text: ></li>
         li.appendChild(cbmake); 
-        /*<li> <input type="checkbox data-type="checkboxContent"></input></li>
+        /*
+            <li> <input type="checkbox data-type="checkboxContent"></input></li>
             appenChild는 리턴타입이 있으며 node는 한번에 하나만 받을 수 있고 append는 한번에 
             여러개의 노드를 받을 수 있지만 리턴 타입이 없음 
             그리고 appendChild는 부모의 마지막 자식으로 들어감
         */
-        active.lastChild.previousSibling.appendChild(li); //active의 마지막 노드는 공백이므로 공백에
-        //li를 넣을 수 없음 previosSibling은 그 전 노드로 가기때문에 그 공백전인 영역의 뒤로 감
+        active.lastChild.previousSibling.appendChild(li); // active의 마지막 노드는 공백이므로 공백에
+        // li를 넣을 수 없음 previosSibling은 그 전 노드로 가기때문에 그 공백전인 영역의 뒤로 감
         }
         catch(error)
         {
             alert(error);
         }
-          //뒷 부분을 더하고 싶으면 insertBefore활용하면 됨
+          // 뒷 부분을 더하고 싶으면 insertBefore활용하면 됨
     }
   
     function renameText()
@@ -85,9 +86,9 @@
                 checkboxgrouping[name].checked=false;   //체크한것이 지워짐
                 const TextSetting=document.getElementById('textSetting');   
                 checkboxgrouping[name].parentNode.firstChild.textContent=TextSetting.value;
-                //체크되어있는 것의 부모의 첫번째 자손(체크한 것)의 텍스트를 텍스트타입의 value로 바꿈
+                // 체크되어있는 것의 부모의 첫번째 자손(체크한 것)의 텍스트를 텍스트타입의 value로 바꿈
                 console.log(checkboxgrouping[name]);
-                //체크한 것의 타입을 콘솔에 출력   
+                // 체크한 것의 타입을 콘솔에 출력   
             }
         }
   
